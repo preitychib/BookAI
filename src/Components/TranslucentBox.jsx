@@ -1,9 +1,7 @@
 import React from 'react';
 
-const TranslucentBox = ({ children, width = '300px', height = '200px', backgroundColor = 'rgba(255, 255, 255, 0.5)', borderRadius = '10px', padding = '20px', style = {} }) => {
+const TranslucentBox = ({ children, backgroundColor = 'rgba(255, 255, 255, 0.05)', borderRadius = '10px', padding = '20px', style = {} }) => {
     const boxStyle = {
-        width,
-        height,
         backgroundColor,
         borderRadius,
         padding,

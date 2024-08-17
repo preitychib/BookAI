@@ -2,25 +2,3 @@
 @tailwind components;
 @tailwind utilities;
 
-
-:root {
-  --primary-bg: linear-gradient(135deg, #1e0533, #110a1f);
-  --accent-color: #8a2be2;
-  --text-color: #ffffff;
-  --text-secondary: #b3b3b3;
-  --gradient-1: linear-gradient(45deg, #726bff, #57b6fe);
-  --gradient-2: linear-gradient(45deg, #8a2be2, #4b0082);
-}
-
-@keyframes moveUpDown {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-4px);
-  }
-}
-
-.dot {
-  animation: moveUpDown 2s infinite ease-in-out;
-}
