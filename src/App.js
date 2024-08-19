@@ -1,7 +1,7 @@
 import './App.css';
-import TranslucentBox from './Components/TranslucentBox';
 import Dots from './Components/Dots';
 import NavBar from './Components/NavBar';
+import ShimmerText from './Components/ShimmerText';
 
 function App() {
   return (
@@ -10,7 +10,9 @@ function App() {
       <NavBar/>    
       <div className="container mx-auto px-4 max-w-screen-lg">
         <br/>
-            <></>
+        <div className="flex items-center justify-center h-screen">
+            <ShimmerText text="Hey Preeti This Side." />
+        </div>
       </div>
       </div>
 
