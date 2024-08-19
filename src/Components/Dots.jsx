@@ -10,7 +10,7 @@ const dots = [
 
 const Dots = () => {
   return (
-    <div className="relative w-full h-full overflow-hidden fixed inset-0">
+    <div className="overflow-hidden fixed inset-0">
       {/* Dots moving from bottom to top */}
       {dots.map((dot, index) => (
         <div
@@ -63,6 +63,58 @@ const Dots = () => {
         />
       ))}
 
+      {/* Dots moving from top-left to bottom-right */}
+      {dots.map((dot, index) => (
+        <div
+          key={index + dots.length * 4}
+          className="absolute w-[6px] h-[6px] rounded-full bg-gray-300"
+          style={{
+            top: dot.top,
+            left: dot.left,
+            animation: "moveTopLeftToBottomRight 10s infinite ease-in-out"
+          }}
+        />
+      ))}
+
+      {/* Dots moving from bottom-right to top-left */}
+      {dots.map((dot, index) => (
+        <div
+          key={index + dots.length * 5}
+          className="absolute w-[6px] h-[6px] rounded-full bg-gray-300"
+          style={{
+            top: dot.top,
+            left: dot.left,
+            animation: "moveBottomRightToTopLeft 10s infinite ease-in-out"
+          }}
+        />
+      ))}
+
+      {/* Dots moving from top-right to bottom-left */}
+      {dots.map((dot, index) => (
+        <div
+          key={index + dots.length * 6}
+          className="absolute w-[6px] h-[6px] rounded-full bg-gray-300"
+          style={{
+            top: dot.top,
+            left: dot.left,
+            animation: "moveTopRightToBottomLeft 10s infinite ease-in-out"
+          }}
+        />
+      ))}
+
+      {/* Dots moving from bottom-left to top-right */}
+      {dots.map((dot, index) => (
+        <div
+          key={index + dots.length * 7}
+          className="absolute w-[6px] h-[6px] rounded-full bg-gray-300"
+          style={{
+            top: dot.top,
+            left: dot.left,
+            animation: "moveBottomLeftToTopRight 10s infinite ease-in-out"
+          }}
+        />
+      ))}
+
       <style>
         {`
           body {
@@ -103,6 +155,42 @@ const Dots = () => {
             }
             50% {
               transform: translateX(-500px);
+            }
+          }
+
+          @keyframes moveTopLeftToBottomRight {
+            0%, 100% {
+              transform: translate(0, 0);
+            }
+            50% {
+              transform: translate(500px, 500px);
+            }
+          }
+
+          @keyframes moveBottomRightToTopLeft {
+            0%, 100% {
+              transform: translate(0, 0);
+            }
+            50% {
+              transform: translate(-500px, -500px);
+            }
+          }
+
+          @keyframes moveTopRightToBottomLeft {
+            0%, 100% {
+              transform: translate(0, 0);
+            }
+            50% {
+              transform: translate(-500px, 500px);
+            }
+          }
+
+          @keyframes moveBottomLeftToTopRight {
+            0%, 100% {
+              transform: translate(0, 0);
+            }
+            50% {
+              transform: translate(500px, -500px);
             }
           }
         `}

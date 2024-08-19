@@ -10,14 +10,7 @@ function App() {
       <NavBar/>    
       <div className="container mx-auto px-4 max-w-screen-lg">
         <br/>
-      {/* <TranslucentBox>
-                      <h2>Title</h2>
-                      <p>This is a translucent box component. You can add any content here.</p>
-                      <p>This is a translucent box component. You can add any content here.This is a translucent box component. You can add any content here.This is a translucent box component. You can add any content here.This is a translucent box component. You can add any content here.This is a translucent box component. You can add any content here.</p>
-                      <p>This is a translucent box component. You can add any content here.</p>
-                      <p>This is a translucent box component. You can add any content here.</p>
-                  </TranslucentBox> */}
-              
+            <></>
       </div>
       </div>
 
